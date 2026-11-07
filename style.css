@@ -1,0 +1,172 @@
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+  color: #17202a;
+  background: #f5f7fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.wrap {
+  max-width: 760px;
+  margin: auto;
+  padding: 18px;
+}
+
+header {
+  background: #162b45;
+  color: white;
+  padding: 22px;
+  border-radius: 18px;
+}
+
+h1 {
+  font-size: 1.45rem;
+  margin: 0 0 6px;
+}
+
+header p {
+  margin: 5px 0;
+  color: #d6e3f2;
+}
+
+.progress {
+  height: 10px;
+  background: #d6e0e9;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 14px 0 5px;
+}
+
+.fill {
+  height: 100%;
+  width: 0;
+  background: #2c8b6e;
+  transition: width 0.2s;
+}
+
+.muted {
+  color: #596879;
+  font-size: 0.9rem;
+}
+
+article {
+  background: white;
+  border: 1px solid #e0e5ec;
+  border-radius: 14px;
+  margin: 12px 0;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(27, 45, 69, 0.06);
+}
+
+article h2 {
+  font-size: 1.05rem;
+  margin: 0 0 10px;
+}
+
+time {
+  color: #506680;
+  font-size: 0.88rem;
+  margin-right: 8px;
+}
+
+label.task {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 8px 0;
+  line-height: 1.35;
+}
+
+input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  accent-color: #28785f;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+label.task:has(input:checked) span {
+  text-decoration: line-through;
+  color: #788493;
+}
+
+textarea,
+input[type="text"] {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  padding: 10px;
+  font: inherit;
+  margin-top: 7px;
+}
+
+textarea {
+  min-height: 75px;
+  resize: vertical;
+}
+
+button {
+  background: #162b45;
+  color: white;
+  border: 0;
+  border-radius: 9px;
+  padding: 12px 14px;
+  font: inherit;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #e7edf4;
+  color: #172b44;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.notice {
+  background: #e9f2ed;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 0.93rem;
+}
+
+details {
+  margin-top: 12px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+footer {
+  font-size: 0.8rem;
+  color: #627085;
+  padding: 15px 0;
+}
+
+@media print {
+  button,
+  .buttons {
+    display: none;
+  }
+
+  body {
+    background: white;
+  }
+
+  article {
+    break-inside: avoid;
+    box-shadow: none;
+  }
+}
